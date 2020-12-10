@@ -1,1 +1,2 @@
-# Bienvenido a este proyecto. 
+# Proyecto del curso "Progamación webOS"
+
