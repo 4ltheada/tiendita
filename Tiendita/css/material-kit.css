@@ -17,6 +17,8 @@
   cursor: url("../../img/arrow-left.png"), url("../../img/arrow-left.cur"), default !important;
 }
 
+
+
 .carousel.carousel-full-navigation .right {
   cursor: url("../../img/arrow-right.png"), url("../../img/arrow-right.cur"), default !important;
 }
@@ -59,6 +61,9 @@ section {
 }
 
 body {
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=99182);
+        <a href="http://www.rw-designer.com/cursor-set/kae-serinuma-wgmd"
+        title="Get free cursors for your web.">Kae Serinuma Watashi ga Motete Dousunda Cursors</a>
   margin: 0;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
