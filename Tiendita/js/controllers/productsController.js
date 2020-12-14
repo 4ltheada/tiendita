@@ -5,12 +5,24 @@
         let store=this;
 
         store.products = []
+        store.reviews = []
+        store.sumStars = 0
+        store.avgStars = 0
 
-        $http.get("./dummy/products.js").then(function(data){
+        $http.get("./dummy/products.json").then(function(data){
             console.info(data)
-            store.products = data;
+            store.products = data.data.gems
+            //store.sumStars = store.products.reviews.map(item => item.stars).reduce((prev, next) => prev + next)
+            //store.avgStars = store.sumStars / store.products.lenght
+            
         })
 
+        store.go = function(_id){
+            console.log(_id)
+            $state.go('app.product', {
+                _id: _id
+            })
+        }
 
     }])
 
