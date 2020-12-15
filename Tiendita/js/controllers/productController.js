@@ -28,7 +28,7 @@
 
             product.reviews = product.detail.reviews
             product.sumStars = product.reviews.map(item => item.stars).reduce((prev, next) => prev + next)
-            product.avgStars = prodcut.sumStars / product.products.length
+            product.avgStars = product.sumStars / product.products.length
             //console.log("productDetail", product.detail)
         })
 

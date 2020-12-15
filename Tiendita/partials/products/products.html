@@ -1,7 +1,22 @@
 <div class="row" ng-controller="Products as prods">
     <div class="col-lg-8 mx-auto">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="productSearch">Buscar</label>
+                <input id="productSearch" ng-model="name" type="text">
+            </div>
+            <div class="col-md-6">
+                <label for="productPrice">Filtar por precio</label>
+                <select name="" id="productPrice" ng-model="price">
+                    <option value="">Precio...</option>
+                    <option value="cheap">0-1000</option>
+                    <option value="standar">1000-2000</option>
+                    <option value="expensive">>2000</option>
+                </select>
+            </div>
+        </div>
         <ul class="list-group">
-            <li class="list-group-item" ng-repeat="p in prods.products" ng-click="prods.go(p._id)">
+            <li class="list-group-item" ng-repeat="p in prods.products | filter: price | filter: name" ng-click="prods.go(p._id)">
                 <div class="media align-items-lg-center flex-column flex-lg-row">
                     <div class="media-body order-2 order-lg-1">
                         <h3 class="mt-0 font-weight-bold mb-2">{{p.name}}</h3>

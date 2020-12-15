@@ -1,6 +1,6 @@
 (function () {
 
-    let app = angular.module('fStore', ['ui.router', 'ui.router.state.events', 'landing', 'navbar', 'footer', 'app', 'products', 'product','gallery','panels','specstab','reviewtab','descripttab']);
+    let app = angular.module('fStore', ['ui.router', 'ui.router.state.events', 'landing', 'navbar', 'footer', 'app', 'products', 'product','gallery','panels','specstab','reviewtab','descripttab', 'mostsold', 'cardproducts', 'carouselproducts']);
     app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $urlRouterProvider, $locationProvider) {
             $stateProvider
@@ -32,9 +32,12 @@
                 }
             })
 
+
             $urlRouterProvider.otherwise('/landing')
             $locationProvider.html5Mode(false)
         }]);
+
+
 
 
 

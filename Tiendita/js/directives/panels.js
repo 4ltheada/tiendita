@@ -5,7 +5,7 @@
     app.directive("productPanels", function(){
         return{
             restrict: "E",
-            templateUrl: 'partials/product-panels-html',
+            templateUrl: 'partials/product-panels.html',
             controller: function(){
                 this.current = 0
 

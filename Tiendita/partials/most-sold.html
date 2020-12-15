@@ -1,0 +1,12 @@
+<div ng-controller="Products as prods">
+    <p class="card-text text-dark">Más vendidos</p>
+    <div class="card-deck">
+        <div class="card" style="height: 350px" ng-repeat="p in prods.products | orderBy : '-timessold' | limitTo: 4" ng-click="prods.go(p._id)">
+            <img card="card-img-top" style="height: 180px" ng-src="{{p.images[0]}}" alt="">
+            <div class="card-body">
+                <h5 class="card-title text-dark">{{p.name}}</h5>
+                <p class="card-text">{{p.price | currency}}</p>
+            </div>
+        </div>  
+    </div>
+</div>
